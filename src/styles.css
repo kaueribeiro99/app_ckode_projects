@@ -1,0 +1,232 @@
+/* You can add global styles to this file, and also import other style files */
+
+/* SNACK BAR CUSTOM */
+.snackBar-danger.mat-snack-bar-container {
+    color: #ffffff !important;
+    background-color: #e31414 !important;
+    border-color: #ffffff !important;
+    border-radius: 6px !important;
+}
+
+.snackBar-success.mat-snack-bar-container {
+    color: #ffffff !important;
+    background-color: #1fa246 !important;
+    border-color: #ffffff !important;
+    border-radius: 6px !important;
+}
+
+.snackBar-warning.mat-snack-bar-container {
+    color: #ffffff !important;
+    background-color: #ec5858 !important;
+    border-color: #ffffff !important;
+    border-radius: 6px !important;
+    /*font-weight: 500;*/
+    width: 250px;
+}
+
+.snackBar-alert.mat-snack-bar-container {
+    color: #ffffff !important;
+    background-color: #f0a303 !important;
+    border-color: #ffffff !important;
+    border-radius: 6px !important;
+    font-weight: 500;
+}
+
+.mat-simple-snackbar-action button {
+    max-height: 36px;
+    min-width: 0;
+    color: #FFFFFF !important;
+}
+
+/* CUSTOM TABLE DEFAULT */
+.header-table {
+    margin-top: 20px;
+    background-color: #ffffff;
+    box-shadow: rgb(0 0 0 / 25%) 0 0 25px -10px, rgb(0 0 0 / 30%) 0 1px 3px -1px;
+    border-radius: 5px;
+}
+
+.search-table {
+    margin: 0 20px;
+    float: left;
+    padding-top: 20px;
+}
+
+.date-table {
+    float: right;
+    padding-top: 20px;
+    margin: 0 10px;
+}
+
+/* MAT HEADER TABLE CUSTOM DEFAULT */
+
+.mat-header-cell {
+    border-top: 1px solid #E0E0E0;
+    font-weight: 600 !important;
+    font-size: 13px!important;
+}
+
+/* CUSTOM BUTTON DEFAULT */
+.mat-raised-button {
+    color: #FFFFFF !important;
+}
+
+/* CUSTOM SEARCH TABLE */
+.search_input_group {
+    display: inline-flex;
+    border-radius: 4px;
+    padding: 0px 12px;
+    align-items:center;
+    transition: 1s;
+    border: 1px solid #E0E0E0;
+    height: 38px;
+}
+
+.search_input_group:focus-within{
+    border-color: #656565;
+}
+
+.search_input_group:hover {
+    border-color: #656565;
+    transition: 1s;
+}
+
+.search_input_group i {
+    color: #656565;
+    font-size: 20px;
+}
+
+.search_input_group .search_input::placeholder{ /* Chrome, Firefox, Opera, Safari 10.1+ */
+    color: #656565;
+    font-size: 15px;
+}
+
+/* CUSTOM MAT PAGINATOR DEFAULT */
+.mat-paginator {
+    background-color: #F7F8FA;
+    border-radius: 5px;
+}
+
+/* Altera a cor do focus do input do bootstrap somente se a classe usava for form-control */
+input.form-control:focus {
+    outline: none !important;
+    box-shadow: 0 0 0 0.1rem #ffddc8 !important;
+    border-color: #fdaf85 !important;
+}
+
+/* Altera o size e a borda dos inputs do bootstrap */
+.form-control {
+    font-size: 0.87rem !important;
+    border-radius: 4px !important;
+}
+
+/* Altera a cor do focus do textarea do bootstrap somente se a classe usava for form-control */
+textarea.form-control:focus {
+    outline: none !important;
+    box-shadow: 0 0 0 0.1rem #ffddc8 !important;
+    border-color: #fdaf85 !important;
+}
+
+/* CUSTOM ICONS TABLE DEFAULT */
+
+.icon-edit-option {
+    background-color: transparent;
+    border: none;
+    font-size: 20px;
+    width: 35px;
+    height: 35px;
+    color: #565656;
+}
+
+.icon-edit-option:hover {
+    background-color: #E2E3E5;
+    border-radius: 50%;
+}
+
+.icon-delete-option {
+    background-color: transparent;
+    border: none;
+    font-size: 20px;
+    width: 35px;
+    height: 35px;
+    color: #DC3545;
+}
+
+.icon-delete-option:hover {
+    background-color: #FFDBDB;
+    border-radius: 50%;
+}
+
+/* Cores Badge Status Projects */
+.bg-in-progress {
+    background-color: #1A8754;
+    width: 85px;
+    font-weight: 600!important;
+    border-radius: 4px!important;
+}
+
+.bg-finished {
+    background-color: #363636;
+    width: 85px;
+    font-weight: 600!important;
+    border-radius: 4px!important;
+}
+
+.bg-closed {
+    background-color: #DC3545;
+    width: 85px;
+    font-weight: 600!important;
+    border-radius: 4px!important;
+}
+
+.bg-proposal {
+    background-color: #1E88E5;
+    width: 85px;
+    font-weight: 600!important;
+    border-radius: 4px!important;
+}
+
+/* Custom ng-select default */
+.ng-dropdown-panel .scroll-host {
+    flex-direction: column;
+    background: #fafafa;
+    box-shadow: 0 0 5px rgb(0 0 0 / 20%);
+    border-radius: 0.3rem;
+    z-index: 1000;
+    position: absolute;
+    width: 100%;
+    max-height: 105px !important;
+    font-size: .9em;
+    margin-left: -12px;
+    margin-top: 8px;
+}
+
+.ng-dropdown-panel .ng-dropdown-panel-items .ng-option {
+    height: 35px;
+    display: flex !important;
+    align-items: center !important;
+    padding: 10px !important;
+    width: 100%;
+}
+
+.ng-dropdown-panel .ng-dropdown-panel-items .ng-option:hover {
+    background-color: rgba(253, 201, 133, 0.9);
+    color: #242424;
+    font-weight: 400;
+}
+
+.color-in-progress {
+    color: #1A8754;
+}
+
+.color-finished {
+    color: #363636;
+}
+
+.color-closed {
+    color: #DC3545;
+}
+
+.color-proposal {
+    color: #1E88E5;
+}

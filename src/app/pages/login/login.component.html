@@ -1,0 +1,39 @@
+<form [formGroup]="form" (ngSubmit)="login()">
+    <body class="background">
+    <div class="card p-5">
+        <img src="assets/images/ckode-black.png" width="280">
+        <p class="subtitle-login mt-4">Hello, Sign in with your email and password</p>
+        <div class="col-md-7 mt-3">
+            <mat-form-field appearance="legacy">
+                <mat-label><i matPrefix class="mdi mdi-email-outline mx-2"></i>E-mail</mat-label>
+                <input type="text" matInput formControlName="email">
+                <mat-error [formGroup]="form" control="email" controlName="email">
+                    Please enter a valid email address
+                </mat-error>
+            </mat-form-field>
+        </div>
+        <div class="col-md-7 mt-3 mb-2">
+            <mat-form-field appearance="legacy">
+                <mat-label><i matPrefix class="mdi mdi-key-outline mx-2"></i>Password</mat-label>
+                <input type="password" matInput formControlName="password">
+                <mat-error [formGroup]="form" control="password" controlName="password">
+                    Enter your password
+                </mat-error>
+            </mat-form-field>
+        </div>
+<!--        <div class="col-md-7 d-flex align-items-center justify-content-between">-->
+<!--            <mat-checkbox class="remember" color="primary">Remember me</mat-checkbox>-->
+<!--            <span class="forgot-password">Forgot password ?</span>-->
+<!--        </div>-->
+        <button type="submit" mat-raised-button class="button-login" color="primary" [disabled]="loading">
+            <span class="spinner"></span>
+            {{ loading ? 'Loading...' : 'LOGIN' }}
+        </button>
+
+        <div class="d-flex align-items-center mt-4">
+            <span class="subtitle-login">Don't have an account ? &nbsp;</span>
+            <span routerLink="/register" class="sign-up">Sign Up</span>
+        </div>
+    </div>
+    </body>
+</form>

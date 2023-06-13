@@ -1,0 +1,53 @@
+<form [formGroup]="form">
+    <body class="background">
+    <div class="card p-5">
+        <div class="d-flex align-items-center" style="margin-right: 50%">
+            <button style="background-color: #E0E0E0" (click)="router.navigate(['/login'])" mat-icon-button>
+                <mat-icon>arrow_back</mat-icon>
+            </button>
+            <div style="margin-left: 48.5%">
+                <img src="assets/images/ckode-black.png" width="280">
+            </div>
+        </div>
+        <p class="subtitle-login mt-4">Hello! You can create your free account and start using it right away.</p>
+        <div class="col-md-8 mt-2 d-flex justify-content-between">
+            <mat-form-field appearance="legacy" style="margin-right: 20px">
+                <mat-label>Name</mat-label>
+                <input type="text" matInput formControlName="name">
+                <mat-error [formGroup]="form" control="name" controlName="name">
+                    Required field
+                </mat-error>
+            </mat-form-field>
+            <mat-form-field appearance="legacy">
+                <mat-label>Username</mat-label>
+                <input type="text" matInput formControlName="username">
+                <mat-error [formGroup]="form" control="username" controlName="username">
+                    Required field
+                </mat-error>
+            </mat-form-field>
+        </div>
+        <div class="col-md-8 mt-3">
+            <mat-form-field appearance="legacy">
+                <mat-label>E-mail</mat-label>
+                <input type="text" matInput formControlName="email">
+                <mat-error [formGroup]="form" control="email" controlName="email">
+                    Please enter a valid email address
+                </mat-error>
+            </mat-form-field>
+        </div>
+        <div class="col-md-8 mt-3 mb-2">
+            <mat-form-field appearance="legacy">
+                <mat-label>Password</mat-label>
+                <input type="password" matInput formControlName="password">
+                <mat-error [formGroup]="form" control="password" controlName="password">
+                    Required field
+                </mat-error>
+            </mat-form-field>
+        </div>
+        <button (click)="create()" type="submit" mat-raised-button class="button-login" color="primary" [disabled]="loading">
+            <span class="spinner"></span>
+            {{ loading ? 'Loading...' : 'SIGN UP' }}
+        </button>
+    </div>
+    </body>
+</form>

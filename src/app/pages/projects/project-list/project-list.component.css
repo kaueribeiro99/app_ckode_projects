@@ -1,0 +1,28 @@
+table {
+    width: 100%;
+}
+
+.border-status-in-progress {
+    width: 10px;
+    height: 48px;
+    background-color: #1A8754;
+}
+
+.border-status-finished {
+    width: 10px;
+    height: 48px;
+    background-color: #363636;
+}
+
+.border-status-closed {
+    width: 10px;
+    height: 48px;
+    background-color: #DC3545;
+}
+
+.border-status-proposal {
+    width: 10px;
+    height: 48px;
+    background-color: #1E88E5;
+}
+

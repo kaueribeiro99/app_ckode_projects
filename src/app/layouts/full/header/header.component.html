@@ -1,0 +1,17 @@
+<div class="d-flex align-items-center">
+    <button class="menu-itens d-flex align-items-center" [matMenuTriggerFor]="menu">
+        <span class="user-login">&nbsp;Olá,&nbsp;{{userName}}&nbsp;</span>
+        <i class="mdi mdi-chevron-down"></i>
+    </button>
+    <mat-menu #menu="matMenu">
+        <button mat-menu-item (click)="logout()" routerLink="/login">
+            <i class="mdi mdi-logout"></i>
+            Logout
+        </button>
+        <button mat-menu-item routerLink="/users">
+            <i class="mdi mdi-account-plus"></i>
+            Settings
+        </button>
+    </mat-menu>
+</div>
+

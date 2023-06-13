@@ -1,0 +1,41 @@
+<mat-card>
+  <mat-card-content>
+    <mat-card-title>Percentage %</mat-card-title>
+    <mat-card-subtitle>Project progress percentage</mat-card-subtitle>
+    <div class="piechart">
+      <apx-chart
+        [series]="percentageChart.series"
+        [chart]="percentageChart.chart"
+        [labels]="percentageChart.labels"
+        [responsive]="percentageChart.responsive"
+        [tooltip]="percentageChart.tooltip"
+        [legend]="percentageChart.legend"
+        [colors]="percentageChart.colors"
+        [dataLabels]="percentageChart.dataLabels"
+        [plotOptions]="percentageChart.plotOptions"
+        [stroke]="percentageChart.stroke"
+      >
+      </apx-chart>
+    </div>
+  </mat-card-content>
+  <hr />
+  <mat-card-content>
+    <ul class="list-inline text-center">
+      <li>
+        <h6 class="color-in-progress m-0">
+          <i class="mdi mdi-checkbox-blank-circle font-10 m-r-10"></i>In Progress
+        </h6>
+      </li>
+      <li>
+        <h6 class="color-proposal m-0">
+          <i class="mdi mdi-checkbox-blank-circle font-10 m-r-10"></i>Proposal
+        </h6>
+      </li>
+      <li>
+        <h6 class="color-finished m-0">
+          <i class="mdi mdi-checkbox-blank-circle font-10 m-r-10"></i>Finished
+        </h6>
+      </li>
+    </ul>
+  </mat-card-content>
+</mat-card>

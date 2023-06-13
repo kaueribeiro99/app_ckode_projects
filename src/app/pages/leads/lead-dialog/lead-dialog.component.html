@@ -1,0 +1,40 @@
+<form [formGroup]="form">
+    <div class="d-flex align-items-center justify-content-between">
+        <h6>{{ lead ? 'Edit Lead' : 'New Lead'}}</h6>
+        <i (click)="closeDialog()" class="mdi mdi-close mb-2"></i>
+    </div>
+        <mat-divider class="mt-2"></mat-divider>
+        <mat-progress-bar style="height: 3px;" color="accent" *ngIf="loading" mode="indeterminate"></mat-progress-bar>
+            <mat-dialog-content class="mat-typography mt-3">
+                <div class="row">
+                    <div class="col-md-6">
+                        <label class="form-label">Name</label>
+                        <input type="text" class="form-control" formControlName="name">
+                    </div>
+                    <div class="col-md-6">
+                        <label class="form-label">Company</label>
+                        <input type="text" class="form-control" formControlName="company">
+                    </div>
+                </div>
+                <div class="row mt-3">
+                    <div class="col-md-6">
+                        <label class="form-label">Email</label>
+                        <input type="text" class="form-control" formControlName="email">
+                    </div>
+                    <div class="col-md-6">
+                        <label class="form-label">Phone Number</label>
+                        <input type="text" class="form-control" formControlName="phone_number">
+                    </div>
+                </div>
+                <div class="row mt-3 mb-2">
+                    <div class="col-md-12">
+                        <label class="form-label">Notes</label>
+                        <textarea type="text" class="form-control" formControlName="notes"></textarea>
+                    </div>
+                </div>
+            </mat-dialog-content>
+        <mat-divider class="mt-4"></mat-divider>
+    <mat-dialog-actions align="end">
+        <button mat-button color="warn" (click)="save(true)" [disabled]="!canSave()" cdkFocusInitial>Save and Close</button>
+    </mat-dialog-actions>
+</form>

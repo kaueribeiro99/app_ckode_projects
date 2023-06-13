@@ -1,0 +1,91 @@
+<div class="d-flex align-items-center justify-content-between p-2">
+    <h3>Projects</h3>
+    <button (click)="openDialog()" mat-raised-button color="primary">Add Project</button>
+</div>
+
+<mat-divider class="mt-3"></mat-divider>
+<mat-progress-bar style="height: 3px;" color="accent" *ngIf="loading" mode="indeterminate"></mat-progress-bar>
+
+<div class="header-table">
+    <div class="search_input_group search-table w-25 mt-4 mb-4">
+        <i class="mdi mdi-magnify"></i>&nbsp;&nbsp;
+        <input class="search_input" matInput (input)="applyFilter($event)" #input placeholder="Search">
+    </div>
+    <table mat-table [dataSource]="dataSource" matSortActive="created_at" matSortDisableClear matSortDirection="desc" matSort (matSortChange)="sortChange($event)">
+
+        <ng-container matColumnDef="color">
+            <th mat-header-cell *matHeaderCellDef></th>
+            <td mat-cell *matCellDef="let element">
+                <div class="d-flex align-items-center" style="position: relative; right: 23px;">
+                    <div *ngIf="element.status == statusProjects.IN_PROGRESS" class="border-status-in-progress"></div>
+                    <div *ngIf="element.status == statusProjects.FINISHED" class="border-status-finished"></div>
+                    <div *ngIf="element.status == statusProjects.CLOSED" class="border-status-closed"></div>
+                    <div *ngIf="element.status == statusProjects.PROPOSAL" class="border-status-proposal"></div>
+                </div>
+            </td>
+        </ng-container>
+
+        <ng-container matColumnDef="created_at">
+            <th mat-header-cell *matHeaderCellDef mat-sort-header> Created at </th>
+            <td mat-cell *matCellDef="let element"> {{element.created_at | date: 'dd-MM-yyyy'}} </td>
+        </ng-container>
+
+        <ng-container matColumnDef="id">
+            <th mat-header-cell *matHeaderCellDef mat-sort-header> Project Number </th>
+            <td mat-cell *matCellDef="let element"> #{{element.id}} </td>
+        </ng-container>
+
+        <ng-container matColumnDef="name">
+            <th mat-header-cell *matHeaderCellDef mat-sort-header> Project Name</th>
+            <td mat-cell *matCellDef="let element"> {{element.name}} </td>
+        </ng-container>
+
+        <ng-container matColumnDef="lead">
+            <th mat-header-cell *matHeaderCellDef mat-sort-header> Lead </th>
+            <td mat-cell *matCellDef="let element"> {{element.lead_name}} </td>
+        </ng-container>
+
+        <ng-container matColumnDef="value">
+            <th mat-header-cell *matHeaderCellDef mat-sort-header> Price (R$) </th>
+            <td mat-cell *matCellDef="let element"> {{element.value | currency: 'BRL'}} </td>
+        </ng-container>
+
+        <ng-container matColumnDef="deadline">
+            <th mat-header-cell *matHeaderCellDef mat-sort-header> Deadline </th>
+            <td mat-cell *matCellDef="let element">{{element.deadline | date: 'dd-MM-yyyy'}}</td>
+        </ng-container>
+
+        <ng-container matColumnDef="status">
+            <th mat-header-cell *matHeaderCellDef mat-sort-header> Progress </th>
+            <td mat-cell *matCellDef="let element">
+                <span class="badge bg-in-progress" *ngIf="element.status == statusProjects.IN_PROGRESS">In Progress</span>
+                <span class="badge bg-finished" *ngIf="element.status == statusProjects.FINISHED">Finished</span>
+                <span class="badge bg-closed" *ngIf="element.status == statusProjects.CLOSED">Closed</span>
+                <span class="badge bg-proposal" *ngIf="element.status == statusProjects.PROPOSAL">Proposal</span>
+            </td>
+        </ng-container>
+
+        <ng-container matColumnDef="options">
+            <th mat-header-cell *matHeaderCellDef></th>
+            <td mat-cell *matCellDef="let element">
+                <div class="mat-icon-no-color">
+                    <button (click)="openDialog(element)" class="icon-edit-option" matTooltip="Details">
+                        <i class="mdi mdi-pencil-outline"></i>
+                    </button>
+                    <button (click)="delete(element.id, element.name)" class="icon-delete-option" matTooltip="Delete">
+                        <i class="mdi mdi-trash-can-outline"></i>
+                    </button>
+                </div>
+            </td>
+        </ng-container>
+
+        <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+        <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+        <tr class="mat-row" *matNoDataRow>
+            <td class="mat-cell" [attr.colspan]="displayedColumns.length">
+                <p class="d-flex align-items-center justify-content-center mt-3">No records found.</p>
+            </td>
+        </tr>
+    </table>
+    <mat-paginator class="mat-paginator" showFirstLastButtons [pageSizeOptions]="[10, 50, 100]"></mat-paginator>
+</div>

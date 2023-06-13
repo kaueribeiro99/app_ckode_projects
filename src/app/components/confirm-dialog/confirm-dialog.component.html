@@ -1,0 +1,13 @@
+<div cdkDrag cdkDragRootElement=".cdk-overlay-pane" style="cursor: grab;">
+    <div class="title-dialog">
+        <i class="mdi mdi-alert icon-alert"></i>
+        <span> {{data.title}} </span>
+    </div>
+    <div>
+        <span class="message-dialog"> {{data.message}} </span>
+    </div>
+    <div class="padding-buttons" align="end">
+        <button mat-flat-button [mat-dialog-close]="false" style="margin-right: 10px;"> {{data.button1}} </button>
+        <button mat-flat-button color="warn" class="mr-2 custom-button" [mat-dialog-close]="true"> {{data.button2}} </button>
+    </div>
+</div>

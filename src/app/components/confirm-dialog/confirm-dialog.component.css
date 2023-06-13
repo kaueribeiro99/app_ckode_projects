@@ -1,0 +1,25 @@
+.title-dialog {
+    font-weight: bold;
+    font-size: 18px;
+    margin-bottom: 15px;
+}
+
+.message-dialog {
+    font-size: 15px;
+}
+
+.padding-buttons {
+    margin-top: 18px;
+}
+
+.mdi-alert::before {
+    content: "\F0026";
+    font-size: revert;
+    color: #f39720;
+}
+
+.custom-button {
+    font-size: 13px;
+    font-weight: 500;
+    background-color: #DC3545;
+}

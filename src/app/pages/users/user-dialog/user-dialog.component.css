@@ -1,0 +1,9 @@
+::ng-deep.custom-slide-toggle .mat-slide-toggle-bar {
+    height: 11px;
+    width: 32px;
+}
+
+::ng-deep.custom-slide-toggle .mat-slide-toggle-thumb {
+    width: 16px;
+    height: 16px;
+}
