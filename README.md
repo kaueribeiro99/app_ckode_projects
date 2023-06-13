@@ -27,7 +27,7 @@ Este projeto é uma aplicação web inicialmente criado para gerenciar leads e p
 
 O projeto foi desenvolvido utilizando as seguintes tecnologias:
 
-- **Front-end**: HTML, CSS e Typescript usando o framework Angular e o Angular Material e Bootstrap para criar a interface do usuário interativa e responsiva.
+- **Front-end**: HTML, CSS e Typescript usando o framework Angular com Angular Material e Bootstrap para criar a interface interativa e responsiva.
 
 - **Back-end**: Python e o framework Django para criar a API REST que gerencia os dados de leads, projetos e usuários.
 
@@ -36,11 +36,10 @@ O projeto foi desenvolvido utilizando as seguintes tecnologias:
 ## Como Executar o Projeto
 
 1. Clone o repositório para sua máquina local.
-2. Certifique-se de ter o Node.js, MySQL, Python e Django instalados em seu sistema.
+2. Certifique-se de ter o Node.js e Angular CLI instalados em seu sistema.
 3. Instale as dependências do projeto executando `npm install` na pasta raiz do projeto.
-4. Configure as informações de conexão com o banco de dados no arquivo `setting.py` de configuração do Django.
-5. Inicie o servidor executando `npm start` na pasta raiz do projeto.
-6. Acesse a aplicação Frontend no seu navegador, digitando o endereço `http://localhost:4200`.
+4. Inicie o servidor executando `npm start` na pasta raiz do projeto.
+5. Acesse a aplicação Frontend no seu navegador, digitando o endereço `http://localhost:4200`.
 
 Certifique-se de que as portas mencionadas estejam disponíveis e não estejam sendo usadas por outros serviços em seu sistema.
 
