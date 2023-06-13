@@ -17,7 +17,7 @@ import {ReactiveFormsModule} from "@angular/forms";
         CommonModule,
         UsersRoutingModule,
         SharedMaterialModule,
-        ReactiveFormsModule
+        ReactiveFormsModule,
     ]
 })
 export class UsersModule { }

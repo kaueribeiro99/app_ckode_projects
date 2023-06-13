@@ -1,5 +1,5 @@
 <form [formGroup]="form">
-    <div class="d-flex align-items-center justify-content-between">
+    <div cdkDrag cdkDragRootElement=".cdk-overlay-pane" cdkDragHandle class="d-flex align-items-center justify-content-between cursor-pointer">
         <h6>{{ project ? 'Edit Project ' + '#' + project.id : 'New Project'}}</h6>
         <i (click)="closeDialog()" class="mdi mdi-close mb-2"></i>
     </div>
@@ -55,7 +55,7 @@
         </div>
     </mat-dialog-content>
     <mat-divider class="mt-4"></mat-divider>
-    <mat-dialog-actions align="end">
+    <mat-dialog-actions class="cursor-pointer" cdkDrag cdkDragRootElement=".cdk-overlay-pane" cdkDragHandle align="end">
         <button mat-button color="warn" (click)="save(true)" [disabled]="!canSave()" cdkFocusInitial>Save and Close</button>
     </mat-dialog-actions>
 </form>

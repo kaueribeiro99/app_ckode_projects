@@ -230,3 +230,7 @@ textarea.form-control:focus {
 .color-proposal {
     color: #1E88E5;
 }
+
+.cursor-pointer {
+    cursor: pointer;
+}
