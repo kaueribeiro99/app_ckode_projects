@@ -25,7 +25,7 @@ export class ProjectListComponent implements OnInit {
   loading: boolean = false;
   statusProjects = STATUS_PROJECTS;
 
-  displayedColumns: string[] = ["color", "created_at", "id", "name", "lead", "value", "deadline", "status", "options"];
+  displayedColumns: string[] = ["color", "created_at", "id", "name", "lead", "company_lead", "value", "deadline", "status", "options"];
   dataSource: MatTableDataSource<ProjectModel> = new MatTableDataSource();
 
   constructor(

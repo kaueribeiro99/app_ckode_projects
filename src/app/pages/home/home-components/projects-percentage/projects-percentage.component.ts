@@ -83,7 +83,7 @@ export class ProjectsPercentageComponent {
         show: false,
       },
       labels: this.statusName,
-      colors: ["#1A8754", "#1E88E5", "#363636"],
+      colors: ["#53889FFF", "#1E88E5", "#1A8754", "#242424"],
       responsive: [
         {
           breakpoint: 767,

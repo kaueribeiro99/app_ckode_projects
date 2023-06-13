@@ -159,21 +159,21 @@ textarea.form-control:focus {
 
 /* Cores Badge Status Projects */
 .bg-in-progress {
-    background-color: #1A8754;
+    background-color: #53889f;
     width: 85px;
     font-weight: 600!important;
     border-radius: 4px!important;
 }
 
 .bg-finished {
-    background-color: #363636;
+    background-color: #1A8754;
     width: 85px;
     font-weight: 600!important;
     border-radius: 4px!important;
 }
 
 .bg-closed {
-    background-color: #DC3545;
+    background-color: #242424;
     width: 85px;
     font-weight: 600!important;
     border-radius: 4px!important;
@@ -216,15 +216,15 @@ textarea.form-control:focus {
 }
 
 .color-in-progress {
-    color: #1A8754;
+    color: #53889FFF;
 }
 
 .color-finished {
-    color: #363636;
+    color: #1A8754;
 }
 
 .color-closed {
-    color: #DC3545;
+    color: #242424;
 }
 
 .color-proposal {

@@ -69,7 +69,7 @@ export class ProjectsOverviewComponent implements OnInit {
         },
       ],
       chart: {
-        height: 320,
+        height: 343,
         type: "bar",
         fontFamily: "Poppins,sans-serif",
       },
@@ -100,13 +100,13 @@ export class ProjectsOverviewComponent implements OnInit {
         categories: this.statusName,
         labels: {
           style: {
-            colors: ["#1A8754", "#1E88E5", "#363636", "#DC3545"],
+            colors: ["#53889FFF", "#1E88E5", "#1A8754", "#242424"],
             fontSize: "12px"
           }
         }
       },
       fill: {
-        colors: ["#1A8754", "#1E88E5", "#363636", "#DC3545"],
+        colors: ["#53889FFF", "#1E88E5", "#1A8754", "#242424"],
         opacity: 1,
       },
       tooltip: {

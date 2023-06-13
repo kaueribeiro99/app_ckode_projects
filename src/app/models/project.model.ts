@@ -5,6 +5,7 @@ export class ProjectModel {
         public name: string,
         public lead_id: number,
         public lead_name: string,
+        public lead_company: string,
         public notes: string,
         public value: number,
         public deadline: string,

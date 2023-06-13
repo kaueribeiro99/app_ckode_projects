@@ -5,19 +5,19 @@ table {
 .border-status-in-progress {
     width: 10px;
     height: 48px;
-    background-color: #1A8754;
+    background-color: #53889FFF;
 }
 
 .border-status-finished {
     width: 10px;
     height: 48px;
-    background-color: #363636;
+    background-color: #1A8754;
 }
 
 .border-status-closed {
     width: 10px;
     height: 48px;
-    background-color: #DC3545;
+    background-color: #242424;
 }
 
 .border-status-proposal {
